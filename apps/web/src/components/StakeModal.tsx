@@ -35,8 +35,7 @@ export const StakeModal: React.FC<StakeModalProps> = ({
       const call = client.buildRegisterKeeperCall(walletAddress, stroops);
 
       console.log("Simulating register_keeper transaction descriptor:", call);
-      alert(`Keeper registration descriptor prepared successfully with stake of ${stakeAmount} XLM.`);
-      onSuccess();
+      alert("Transaction descriptor built. Not submitted: signing is not implemented yet.");
       onClose();
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : String(err);

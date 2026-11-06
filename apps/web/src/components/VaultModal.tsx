@@ -40,8 +40,7 @@ export const VaultModal: React.FC<VaultModalProps> = ({
           : { contractId: client.config.bountyVaultId, method: "withdraw", args: { owner: walletAddress, amount: stroops.toString() } };
 
       console.log(`Simulating ${mode} transaction descriptor:`, call);
-      alert(`${mode === "deposit" ? "Deposit" : "Withdrawal"} descriptor prepared successfully for ${amount} XLM.`);
-      onSuccess();
+      alert("Transaction descriptor built. Not submitted: signing is not implemented yet.");
       onClose();
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : String(err);

@@ -47,8 +47,7 @@ export const CreateJobModal: React.FC<CreateJobModalProps> = ({
       });
 
       console.log("Simulating create_job transaction descriptor:", call);
-      alert(`Job creation descriptor prepared successfully for contract ${targetContract.slice(0, 6)}...`);
-      onJobCreated();
+      alert("Transaction descriptor built. Not submitted: signing is not implemented yet.");
       onClose();
     } catch (err: unknown) {
       const message = err instanceof Error ? err.message : String(err);
