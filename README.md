@@ -7,9 +7,14 @@
 [![CI](https://github.com/takt-protocol/takt-app/actions/workflows/ci.yml/badge.svg)](https://github.com/takt-protocol/takt-app/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](LICENSE)
 
-**Takt Protocol** is a decentralized automation and keeper protocol built natively for Stellar Soroban smart contracts. It enables developers, DAOs, and protocols to schedule recurring function executions, liquidate undercollateralized loans, harvest yield, and automate contract state maintenance without relying on centralized servers.
+**Takt Protocol** is an automation and keeper protocol for Stellar Soroban smart contracts. It provides tooling to schedule recurring function calls and state maintenance invocations on Soroban contracts via off-chain keeper polling and on-chain bounty escrows.
 
-This repository (`takt-app`) contains the off-chain architecture: the official TypeScript SDK, the Go keeper node daemon, and the web application interface.
+### Planned use cases
+- Liquidating undercollateralized lending positions
+- Automated yield harvesting
+- Recurring DAO treasury operations
+
+This repository (`takt-app`) contains the off-chain architecture: the TypeScript SDK, the Go keeper node daemon, and the web application interface.
 
 The on-chain smart contracts (`keeper-registry`, `bounty-vault`, and `job-engine`) are maintained in [`takt-protocol/takt-contract`](https://github.com/takt-protocol/takt-contract).
 
@@ -90,7 +95,7 @@ const client = new TaktClient({
 
 // Build a create_job transaction descriptor
 const call = client.buildCreateJobCall({
-  owner: "GBKGRYZZEELD6POCG5E3MNMA3CT7OKF45CUX3FUDSJH6NJXAMTPXIYRS",
+  owner: "<OWNER_ADDRESS>",
   targetContract: "CDLZFC3SYJYDZT7K67VZ75HPJVIEUVNIXF47ZG2FB2RMQQVU2HHGCYSC",
   targetFn: "harvest_yield",
   intervalSeconds: 300,
@@ -105,7 +110,7 @@ const { keeperReward, protocolFee } = calculateBountySplit(toStroops("5.0"), 500
 
 ### 2. Keeper Node Service (`services/keeper`)
 
-The keeper node connects to the Soroban RPC network, monitors active jobs, and claims bounties.
+The keeper node connects to the Soroban RPC network and monitors active jobs for execution readiness.
 
 Build the binary:
 
