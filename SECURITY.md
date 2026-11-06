@@ -1,6 +1,8 @@
 # Security Policy
 
-Takt Protocol takes the security of its decentralized infrastructure, TypeScript SDK, keeper node daemons, and frontend web applications seriously.
+## Audit Status Disclaimer
+
+`takt-app` (v0.1.0) is unaudited and designed for evaluation on Stellar Testnet (`Test SDF Network ; September 2015`). Do not use production secret keys or production funds.
 
 ## Supported Versions
 
@@ -35,5 +37,3 @@ Please include:
 - A description of the vulnerability and its potential impact.
 - Step-by-step instructions or proof-of-concept scripts to reproduce the issue.
 - Any relevant logs, transaction hashes, or environment details.
-
-We commit to acknowledging reports within 48 hours and providing coordinated remediation timelines.
