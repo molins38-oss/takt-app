@@ -25,6 +25,7 @@ func NewKeeperDaemon(cfg *Config) *KeeperDaemon {
 
 func (d *KeeperDaemon) Start() {
 	log.Printf("Starting Takt Keeper Daemon (Network: %s, Poll Interval: %ds)", d.config.RPCURL, d.config.PollIntervalSeconds)
+	log.Println("[Keeper] stub: job polling and execution are not implemented; no RPC queries are made")
 
 	// Start HTTP health server
 	mux := http.NewServeMux()
@@ -66,7 +67,7 @@ func (d *KeeperDaemon) Start() {
 }
 
 func (d *KeeperDaemon) pollAndExecuteJobs() {
-	log.Println("[Keeper] Polling Soroban RPC for executable jobs...")
+	log.Println("[Keeper] stub: job polling and execution are not implemented; no RPC queries are made")
 	// In production, this queries JobEngine contract state and submits execute_job transactions
 }
 
