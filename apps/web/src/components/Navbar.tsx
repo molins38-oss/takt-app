@@ -84,9 +84,12 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         <div>
           {walletAddress ? (
-            <div className="flex items-center space-x-2 px-4 py-2 rounded-xl bg-slate-800/80 border border-slate-700 text-sm">
+            <div className="flex items-center space-x-2 px-3 py-1.5 rounded-xl bg-slate-800/80 border border-slate-700 text-sm">
               <CheckCircle2 className="h-4 w-4 text-emerald-400"/>
               <span className="font-mono text-slate-200">{shortenAddress(walletAddress)}</span>
+              <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                Demo wallet (testnet admin key)
+              </span>
             </div>
           ) : (
             <button
@@ -94,7 +97,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="flex items-center space-x-2 px-4 py-2 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-sm transition-all shadow-lg shadow-emerald-600/20"
             >
               <Wallet className="h-4 w-4"/>
-              <span>Connect Wallet</span>
+              <span>Use demo wallet</span>
             </button>
           )}
         </div>
