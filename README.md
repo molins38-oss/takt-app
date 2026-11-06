@@ -48,8 +48,8 @@ The on-chain smart contracts (`keeper-registry`, `bounty-vault`, and `job-engine
 | Directory | Component | Language / Framework | Description |
 |-----------|-----------|----------------------|-------------|
 | `packages/sdk` | `@takt-protocol/sdk` | TypeScript / `@stellar/stellar-sdk` | Client library for constructing Soroban transactions, parsing error codes, converting stroops, and calculating bounty fee splits. |
-| `services/keeper` | `takt-keeper` | Go 1.22 | Lightweight daemon that polls the Soroban RPC for executable automation jobs, signs transactions, and maintains contract TTLs. |
-| `apps/web` | `@takt-protocol/web` | React 18 / Vite / Tailwind CSS | Interactive decentralized app for scheduling jobs, depositing vault collateral, staking as a keeper, and inspecting contracts. |
+| `services/keeper` | `takt-keeper` | Go 1.22 | Daemon stub for polling Soroban RPC and executing automation jobs (see Current limitations). |
+| `apps/web` | `@takt-protocol/web` | React 18 / Vite / Tailwind CSS | Web dashboard running in demo mode for scheduling jobs, vault management, and keeper staking. |
 
 ---
 
@@ -168,10 +168,11 @@ For recorded testnet deployment transaction hashes and execution receipts, see t
 
 ---
 
-## Project Status & Current Limitations
+## Current limitations
 
-- **Testnet Alpha (Unaudited):** Currently operating on Stellar Testnet (`Test SDF Network ; September 2015`).
-- **SDK & Web Transaction Signing:** `@takt-protocol/sdk` constructs validated contract call descriptors (`TaktContractCall`) and queries Soroban RPC; full XDR transaction assembly/signing in the Go keeper (`services/keeper`) and browser wallet signing via `@stellar/freighter-api` in `apps/web` are active roadmap items tracked in open GitHub issues.
+- **Dashboard runs in demo mode with sample data**: The web interface (`apps/web`) displays hardcoded sample jobs and keepers rather than querying live Soroban contract state directly. Live RPC state integration is tracked in [#14](https://github.com/takt-protocol/takt-app/issues/14).
+- **Keeper is a stub**: The keeper daemon (`services/keeper`) runs a local health server and ticker, but job polling and execution are not implemented; it makes no RPC queries. Pre-execution simulation and RPC error handling are tracked in [#13](https://github.com/takt-protocol/takt-app/issues/13) and [#12](https://github.com/takt-protocol/takt-app/issues/12).
+- **Wallet signing not implemented**: Action modals build transaction descriptors but do not submit transactions to the network because browser wallet signing (such as Freighter) is not implemented yet. This is tracked in [#3](https://github.com/takt-protocol/takt-app/issues/3).
 
 ---
 
