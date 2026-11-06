@@ -176,6 +176,20 @@ Please review [SECURITY.md](SECURITY.md) for information regarding vulnerability
 
 Contributions are welcomed! See [CONTRIBUTING.md](CONTRIBUTING.md) for local development setup and pull request guidelines.
 
+## Maintainers
+
+| Maintainer | Role | Contact |
+|---|---|---|
+| webdevayo | Core Maintainer | [@dev_ayo](https://t.me/dev_ayo) |
+
+---
+
+## Community
+
+- [Community Chat](https://t.me/+9120mKpa2CpkNjg8)
+
+---
+
 ## Contributors
 
 <a href="https://github.com/takt-protocol/takt-app/graphs/contributors">
