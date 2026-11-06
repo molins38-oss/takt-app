@@ -131,25 +131,25 @@ export const JobsView: React.FC<JobsViewProps> = ({
                 <div className="flex items-center space-x-2">
                   {job.status === "Active" ? (
                     <button
-                      onClick={() => alert(`Simulating pause_job for Job #${job.id}`)}
-                      className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-400 transition-colors"
-                      title="Pause Job"
+                      disabled
+                      className="p-2 rounded-xl bg-slate-800 text-amber-400 opacity-50 cursor-not-allowed"
+                      title="Demo only: requires wallet signing"
                     >
                       <Pause className="h-4 w-4"/>
                     </button>
                   ) : job.status === "Paused" ? (
                     <button
-                      onClick={() => alert(`Simulating resume_job for Job #${job.id}`)}
-                      className="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-emerald-400 transition-colors"
-                      title="Resume Job"
+                      disabled
+                      className="p-2 rounded-xl bg-slate-800 text-emerald-400 opacity-50 cursor-not-allowed"
+                      title="Demo only: requires wallet signing"
                     >
                       <Play className="h-4 w-4"/>
                     </button>
                   ) : null}
                   <button
-                    onClick={() => alert(`Simulating cancel_job & escrow refund for Job #${job.id}`)}
-                    className="p-2 rounded-xl bg-rose-500/10 hover:bg-rose-500/20 text-rose-400 border border-rose-500/20 transition-colors"
-                    title="Cancel & Refund Escrow"
+                    disabled
+                    className="p-2 rounded-xl bg-rose-500/10 text-rose-400 border border-rose-500/20 opacity-50 cursor-not-allowed"
+                    title="Demo only: requires wallet signing"
                   >
                     <XCircle className="h-4 w-4"/>
                   </button>

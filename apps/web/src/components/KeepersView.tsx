@@ -115,8 +115,9 @@ export const KeepersView: React.FC<KeepersViewProps> = ({
                 <span>Registered: #{keeper.registeredAt}</span>
                 {keeper.status === "Active" && (
                   <button
-                    onClick={() => alert(`Simulating request_unbond for keeper ${shortenAddress(keeper.address, 4)}`)}
-                    className="text-amber-400 hover:text-amber-300 font-medium transition-colors"
+                    disabled
+                    className="text-amber-400 opacity-50 cursor-not-allowed font-medium"
+                    title="Demo only: requires wallet signing"
                   >
                     Request Unbond
                   </button>
