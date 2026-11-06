@@ -105,6 +105,9 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen flex flex-col bg-slate-950 text-slate-100">
+      <div className="bg-amber-500/10 border-b border-amber-500/20 px-4 py-2 text-center text-xs sm:text-sm text-amber-300 font-medium">
+        Demo mode: wallet signing and transaction submission are not implemented. Data marked &apos;sample&apos; is not live.
+      </div>
       <Navbar
         activeTab={activeTab}
         networkName={client.config.network}
