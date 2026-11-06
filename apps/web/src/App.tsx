@@ -13,6 +13,7 @@ import { VaultView } from "./components/VaultView.js";
 import { KeepersView } from "./components/KeepersView.js";
 import { DeployView } from "./components/DeployView.js";
 
+// Sample jobs data for demo dashboard rendering; not live on-chain state
 const INITIAL_JOBS: Job[] = [
   {
     id: 1,
@@ -44,6 +45,7 @@ const INITIAL_JOBS: Job[] = [
   },
 ];
 
+// Sample keepers data for demo dashboard rendering; not live on-chain state
 const INITIAL_KEEPERS: KeeperInfo[] = [
   {
     address: "GBKGRYZZEELD6POCG5E3MNMA3CT7OKF45CUX3FUDSJH6NJXAMTPXIYRS",

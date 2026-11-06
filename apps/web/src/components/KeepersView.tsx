@@ -27,6 +27,9 @@ export const KeepersView: React.FC<KeepersViewProps> = ({
           <h2 className="text-2xl font-bold text-slate-100 flex items-center space-x-2">
             <Shield className="h-6 w-6 text-blue-400"/>
             <span>Keeper Network & Staking</span>
+            <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">
+              Sample data
+            </span>
           </h2>
           <p className="text-sm text-slate-400 mt-1">
             Decentralized keeper nodes ensuring reliable task execution and TTL maintenance.
@@ -67,9 +70,14 @@ export const KeepersView: React.FC<KeepersViewProps> = ({
             >
               <div>
                 <div className="flex items-center justify-between mb-4">
-                  <span className="font-mono text-sm text-slate-200 font-semibold">
-                    {shortenAddress(keeper.address, 6)}
-                  </span>
+                  <div className="flex items-center space-x-2">
+                    <span className="font-mono text-sm text-slate-200 font-semibold">
+                      {shortenAddress(keeper.address, 6)}
+                    </span>
+                    <span className="px-2 py-0.5 text-xs font-medium rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                      Sample data
+                    </span>
+                  </div>
                   <span
                     className={`px-3 py-1 text-xs font-medium rounded-full border flex items-center space-x-1 ${
                       keeper.status === "Active"
