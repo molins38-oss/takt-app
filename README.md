@@ -5,9 +5,7 @@
 # Takt Protocol (`takt-app`)
 
 [![CI](https://github.com/takt-protocol/takt-app/actions/workflows/ci.yml/badge.svg)](https://github.com/takt-protocol/takt-app/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](https://opensource.org/licenses/MIT)
-[![Node Version](https://img.shields.io/badge/node-%3E%3D20.0.0-brightgreen.svg)](https://nodejs.org/)
-[![Go Version](https://img.shields.io/badge/go-%3E%3D1.22.0-blue.svg)](https://golang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-emerald.svg)](LICENSE)
 
 **Takt Protocol** is a decentralized automation and keeper protocol built natively for Stellar Soroban smart contracts. It enables developers, DAOs, and protocols to schedule recurring function executions, liquidate undercollateralized loans, harvest yield, and automate contract state maintenance without relying on centralized servers.
 
